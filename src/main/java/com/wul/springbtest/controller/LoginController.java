@@ -6,10 +6,6 @@ import com.wul.springbtest.utils.ExceptionHandler;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
-/**
- *
- * 这是我改的东西
- */
 @RestController
 @RequestMapping(value = "/index", produces = "application/json; charset=utf-8")
 public class LoginController {
