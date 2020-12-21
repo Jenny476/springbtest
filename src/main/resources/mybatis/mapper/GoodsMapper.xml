@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wul.springbtest.mapper.GoodsMapper">
+    <insert id="addGoods">
+        insert into `goods`(
+         `goods_type_id`,
+            `user_id`,
+            `name`,
+            `repertory`,
+            `price`,
+            `real_price`,
+            `release_date`,
+            `describle`,
+            `img`
+        )
+        VALUES (
+            #{goods_type_id},
+            #{user_id},
+            #{name},
+            #{repertory},
+            #{price},
+            #{real_price},
+            #{release_date},
+            #{describle},
+            #{img}
+        )
+    </insert>
+
+</mapper>
