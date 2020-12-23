@@ -2,28 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wul.springbtest.mapper.GoodsMapper">
     <insert id="addGoods">
-        insert into `goods`(
-         `goods_type_id`,
-            `user_id`,
-            `name`,
-            `repertory`,
-            `price`,
-            `real_price`,
-            `release_date`,
-            `describle`,
-            `img`
-        )
-        VALUES (
-            #{goods_type_id},
-            #{user_id},
-            #{name},
-            #{repertory},
-            #{price},
-            #{real_price},
-            #{release_date},
-            #{describle},
-            #{img}
-        )
+        insert into goods
+            set goods_id = #{goodsId},set goods_type_id=#{goodsTypeId},set goods_state_id=#{goodsStateId},
+            set goods_name=#{goodsName},set repertory=#{repertory},set price=#{price},set realPrice=#{realPrice},set creator_id=#{creatorId},
+            set create_time=#{createTime},set modifier_id=#{modifierId},set modify_time=#{modifyTime},set isDelete=#{isDelete},
+            set description=#{description},set logo=#{logo}
     </insert>
 
 </mapper>

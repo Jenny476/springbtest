@@ -4,14 +4,14 @@ public class GoodsType {
     /**
      * 商品类别类
      */
-    private int id;//类别编号
+    private String id;//类别编号
     private String typename;//类别名
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

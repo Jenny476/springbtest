@@ -4,6 +4,7 @@ public class ExceptionHandler extends RuntimeException {
     private static final long serialVersionUID = 1L;
 
     public static final ExceptionHandler LOGIN_ERROR = new ExceptionHandler("用户登录失败");
+    public static final ExceptionHandler NOT_LOGIN = new ExceptionHandler("用户未登录");
 
     public ExceptionHandler(String message) {
         super(message);

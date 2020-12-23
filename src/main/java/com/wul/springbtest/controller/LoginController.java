@@ -2,9 +2,12 @@ package com.wul.springbtest.controller;
 
 import com.wul.springbtest.enity.User;
 import com.wul.springbtest.service.LoginService;
-import com.wul.springbtest.utils.ExceptionHandler;
-import org.springframework.util.ObjectUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 
 @RestController
@@ -17,7 +20,7 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public User login(@RequestBody User user) {
-        return loginService.finduser(user);
+    public User login(@RequestBody User user, HttpServletRequest request) {
+        return loginService.finduser(user,request);
     }
 }

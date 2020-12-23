@@ -1,88 +1,103 @@
 package com.wul.springbtest.enity;
 
+import java.util.Date;
+
 public class Goods {
     /**
-     * 闲置商品类
+     * db_column: goods_id (varchar(32)) 不为null primary key
      */
-    private int id;//商品编号
+    private String goodsId;
+    /**
+     * db_column: goods_type_id (varchar(32)) 不为null
+     */
+    private String goodsTypeId;
+    /**
+     * db_column: goods_state_id (varchar(32)) 不为null
+     */
+    private String goodsStateId;
+    /**
+     * db_column: goods_name (varchar(64)) 不为null
+     */
+    private String goodsName;
+    /**
+     * db_column: repertory (int(16)) 不为null
+     */
+    private int repertory;
+    /**
+     * db_column: price (float(16)) 不为null
+     */
+    private float price;
+    /**
+     * db_column: realPrice (float(16)) 不为null
+     */
+    private float realPrice;
+    /**
+     * db_column: creator_id (varchar(32)) 不为null
+     */
+    private String creatorId;
+    /**
+     * db_column: create_time (timestamp) 不为null
+     */
+    private Date createTime;
+    /**
+     * db_column: modifier_id (varchar(32)) 不为null
+     */
+    private String modifierId;
+    /**
+     * db_column: modifier_time (timestamp) 不为null
+     */
+    private Date modifyTime;
+    /**
+     * db_column: isDelete  (bit(1)） 不为null
+     */
+    private Boolean isDelete;
+    /**
+     * db_column: deleter_id (varchar(32)) 可为null
+     */
+    private String deleterId;
+    /**
+     * db_column: delete_time (timestamp) 可为null
+     */
+    private Date deleteTime;
+    /**
+     * db_column: description (varchar(512)) 可为null
+     */
+    private String description;
+    /**
+     * db_column: logo (varchar(64)) 可为null
+     */
+    private String logo;
 
-    private int goods_type_id;//商品类别编号
-    private GoodsType goodstype;//商品类别
-    private  int user_id;
-    private User user;//用户编号，谁发布的
-    private GoodsState goodsState;//商品状态
-    private int status;//状态：上架 下架
-    private String name;//商品名称
-    private int repertory;//商品库存
-    private float price;//商品出售价格
-    private float real_price;//商品原价
-    private String release_date;//发布时间
-    private String remove_date;//下架时间
-    private String describle;//商品描述
-    private String img;//商品图片
-
-    public int getId() {
-        return id;
+    public String getGoodsId() {
+        return goodsId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setGoodsId(String goodsId) {
+        this.goodsId = goodsId;
     }
 
-    public int getGoods_type_id() {
-        return goods_type_id;
+    public String getGoodsTypeId() {
+        return goodsTypeId;
     }
 
-    public void setGoods_type_id(int goods_type_id) {
-        this.goods_type_id = goods_type_id;
+    public void setGoodsTypeId(String goodsTypeId) {
+        this.goodsTypeId = goodsTypeId;
     }
 
-    public GoodsType getGoodstype() {
-        return goodstype;
+    public String getGoodsStateId() {
+        return goodsStateId;
     }
 
-    public void setGoodstype(GoodsType goodstype) {
-        this.goodstype = goodstype;
+    public void setGoodsStateId(String goodsStateId) {
+        this.goodsStateId = goodsStateId;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public String getGoodsName() {
+        return goodsName;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public GoodsState getGoodsState() {
-        return goodsState;
-    }
-
-    public void setGoodsState(GoodsState goodsState) {
-        this.goodsState = goodsState;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setGoodsName(String goodsName) {
+        this.goodsName = goodsName;
     }
 
     public int getRepertory() {
@@ -101,43 +116,83 @@ public class Goods {
         this.price = price;
     }
 
-    public float getReal_price() {
-        return real_price;
+    public float getRealPrice() {
+        return realPrice;
     }
 
-    public void setReal_price(float real_price) {
-        this.real_price = real_price;
+    public void setRealPrice(float realPrice) {
+        this.realPrice = realPrice;
     }
 
-    public String getRelease_date() {
-        return release_date;
+    public String getCreatorId() {
+        return creatorId;
     }
 
-    public void setRelease_date(String release_date) {
-        this.release_date = release_date;
+    public void setCreatorId(String creatorId) {
+        this.creatorId = creatorId;
     }
 
-    public String getRemove_date() {
-        return remove_date;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setRemove_date(String remove_date) {
-        this.remove_date = remove_date;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public String getDescrible() {
-        return describle;
+    public String getModifierId() {
+        return modifierId;
     }
 
-    public void setDescrible(String describle) {
-        this.describle = describle;
+    public void setModifierId(String modifierId) {
+        this.modifierId = modifierId;
     }
 
-    public String getImg() {
-        return img;
+    public Date getModifyTime() {
+        return modifyTime;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
+
+    public Boolean getDelete() {
+        return isDelete;
+    }
+
+    public void setDelete(Boolean delete) {
+        isDelete = delete;
+    }
+
+    public String getDeleterId() {
+        return deleterId;
+    }
+
+    public void setDeleterId(String deleterId) {
+        this.deleterId = deleterId;
+    }
+
+    public Date getDeleteTime() {
+        return deleteTime;
+    }
+
+    public void setDeleteTime(Date deleteTime) {
+        this.deleteTime = deleteTime;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 }
